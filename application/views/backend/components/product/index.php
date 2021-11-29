@@ -1,6 +1,6 @@
 <div class="content-wrapper">
 	<section class="content-header">
-		<h1><i class="glyphicon glyphicon-cd"></i> Danh sách sản phẩm</h1>
+		<h1><i class="glyphicon glyphicon-folder-close"></i> Danh sách sản phẩm</h1>
 		<div class="breadcrumb">
 			
 			<?php

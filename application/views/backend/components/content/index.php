@@ -1,6 +1,6 @@
 <div class="content-wrapper">
 	<section class="content-header">
-		<h1><i class="glyphicon glyphicon-text-background"></i> Danh sách bài viết</h1>
+		<h1><i class="glyphicon glyphicon-th-list"></i> Danh sách bài viết</h1>
 		<div class="breadcrumb">
 			<a class="btn btn-primary btn-sm" href="<?php echo base_url()?>/admin/content/insert" role="button">
 				<span class="glyphicon glyphicon-plus"></span> Thêm mới

@@ -1,6 +1,6 @@
 <div class="content-wrapper">
 	<section class="content-header">
-		<h1><i class="glyphicon glyphicon-text-background"></i> Danh sách mã giảm giá</h1>
+		<h1><i class="glyphicon glyphicon-qrcode"></i> Danh sách mã giảm giá</h1>
 		<div class="breadcrumb">
 			
 			<?php

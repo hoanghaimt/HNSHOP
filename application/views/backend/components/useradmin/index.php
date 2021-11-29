@@ -1,6 +1,6 @@
 <div class="content-wrapper">
 	<section class="content-header">
-		<h1><i class="glyphicon glyphicon-cd"></i> Danh sách tài khoản nhân viên</h1>
+		<h1><i class="glyphicon glyphicon-user"></i> Danh sách tài khoản nhân viên</h1>
 		<div class="breadcrumb">
 			<?php  
 				$QuyenThem='';
