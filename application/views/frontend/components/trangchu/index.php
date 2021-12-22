@@ -322,7 +322,10 @@
             </div>
             </div>
             <?php endforeach; ?>
-            <div>
+            <div class="zalo-chat-widget" data-oaid="2983646200108513843" data-welcome-message="Rất vui khi được hỗ trợ bạn!" data-autopopup="0" data-width="300" data-height="300"></div>
+
+<script src="https://sp.zalo.me/plugins/sdk.js"></script>
+           <div>
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.125052042533!2d106.71230301430725!3d10.801733161680902!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317528a500e8c3d5%3A0xedfca63e47b5afb8!2zNDc1YSDEkGnhu4duIEJpw6puIFBo4bunLCBQaMaw4budbmcgMjUsIELDrG5oIFRo4bqhbmgsIFRow6BuaCBwaOG7kSBI4buTIENow60gTWluaCA3MDAwMCwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1637756313190!5m2!1svi!2s" width="1200" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                 </div>
         </div>
