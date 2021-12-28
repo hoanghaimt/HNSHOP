@@ -34,7 +34,7 @@ class Thongtin extends CI_Controller {
         $priceShip=$this->Mconfig->config_price_ship();
         $this->data['row'] = $this->Morderdetail->orderdetail_order_join_product($id);
         $this->data['info']=$this->Minfocustomer->order_orderid($id);
-        $this->data['title']='Xuhao store - Chi tiết đơn hàng';  
+        $this->data['title']='HNSHOP - Chi tiết đơn hàng';  
         $this->data['view']='detail';
         $this->load->view('frontend/layout',$this->data);
     }
