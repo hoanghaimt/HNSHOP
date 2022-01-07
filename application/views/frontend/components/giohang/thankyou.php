@@ -65,6 +65,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                     <td>Địa chỉ thanh toán :</td>
                                     <td><?php echo $get['address'] ?>, <?php echo $this->Mdistrict->district_name($get['district'] )?>, <?php echo $this->Mprovince->province_name($get['province'] )?></td>
                                 </tr>
+                                <tr>
+                                    <td> Ghi chú: </td>
+                                    <td> <?php echo $get['cmt']?></td> 
+                                </tr>
                             </tbody>
                         </table>
                     </div>

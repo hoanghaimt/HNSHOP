@@ -32,7 +32,6 @@ class Category extends CI_Controller {
 		$this->data['title']='Loại sản phẩm';
 		$this->load->view('backend/layout', $this->data);
 	}
-
 	public function insert()
 	{
 		$user_role=$this->session->userdata('sessionadmin');

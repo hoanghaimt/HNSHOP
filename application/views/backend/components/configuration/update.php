@@ -2,7 +2,7 @@
 <div class="content-wrapper">
 	<form action="<?php echo base_url() ?>admin/configuration/update.html" enctype="multipart/form-data" method="POST" accept-charset="utf-8">
 		<section class="content-header">
-			<h1><i class="glyphicon glyphicon-text-background"></i> Hệ Thống</h1>
+			<h1><i class="glyphicon glyphicon-th-large"></i> Hệ Thống</h1>
 			<div class="breadcrumb">
 				<button type = "submit" class="btn btn-primary btn-sm">
 					<span class="glyphicon glyphicon-floppy-save"></span>

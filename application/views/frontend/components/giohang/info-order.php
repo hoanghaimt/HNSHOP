@@ -108,7 +108,15 @@ if(!$this->session->userdata('cart')){
                                     </td>
                                 </tr>
 
-                             
+                                <tr>
+                                    <td class="width30 text-right td-right-order">Ghi Chú (nếu có):</td>
+                                    <td>
+                                         <input id="coupon" style="border-radius: 5px" type="text" class="form-control" placeholder="Ghi Chú" name="coupon">
+                                    <div class="error" id="result_coupon"></div>
+                                    </td>
+                        
+                                </tr>
+                                
                             <tr>
                                 <td style="border: none;"></td>
                                 <td style="border: none;"><div class="btn-checkout frame-100-1 overflow-hidden border-pri" style="float: right;">

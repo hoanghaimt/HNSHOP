@@ -1,3 +1,4 @@
+
 <?php
 /**
  * CodeIgniter
@@ -1769,7 +1770,7 @@ class CI_Email {
 
 			if ($this->protocol !== 'smtp')
 			{
-				$this->set_header('Bcc', implode(', ', $bcc));
+				$this->set_header('Bcc', implode(', ',$bcc));
 			}
 			else
 			{

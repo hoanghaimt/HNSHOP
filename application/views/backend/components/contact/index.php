@@ -1,6 +1,6 @@
 <div class="content-wrapper">
 	<section class="content-header">
-		<h1><i class="glyphicon glyphicon-text-background"></i> Danh sách Liên hệ khách hàng</h1>
+		<h1><i class="	glyphicon glyphicon-phone-alt"></i> Danh sách Liên hệ khách hàng</h1>
 		<div class="breadcrumb">
 			
 			<a class="btn btn-primary btn-sm" href="<?php echo base_url()?>admin/contact/recyclebin" role="button">
