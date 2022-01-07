@@ -97,15 +97,25 @@ class Sanpham extends CI_Controller {
     public function addcart(){
         $this->load->library('session');
         $id=$_POST['id'];
+        $quantity = $_POST["quantity"];
+        if($quantity <= 0 ) {
+            echo json_encode(["error" => "true"]);
+            return;
+        } 
+        $row = $this->Mproduct->product_detail_id($id);
+        if(($row['number'] - $row['number_buy']) - (int)$quantity < 0) {
+           echo json_encode(["error" => "true"]);
+           return;
+        }
         if($this->session->userdata('cart')){
             $cart=$this->session->userdata('cart');
             if(array_key_exists($id, $cart)){
-                $cart[$id]++;
+                $cart[$id] = (int) $quantity + $cart[$id];
             }else{
-                $cart[$id] = 1;
+                $cart[$id] = (int) $quantity;
             }
         }else{
-            $cart[$id]=1;
+            $cart[$id]= (int) $quantity;
         }
         $this->session->set_userdata('cart',$cart);
         echo json_encode( $cart );
@@ -114,6 +124,16 @@ class Sanpham extends CI_Controller {
     public function update(){
         $this->load->library('session');
         $id=$_POST['id'];
+        $quantity = $_POST["sl"];
+        if($quantity <= 0 ) {
+            echo json_encode(["error" => "true"]);
+            return;
+        } 
+        $row = $this->Mproduct->product_detail_id($id);
+        if(($row['number'] - $row['number_buy']) - (int)$quantity < 0) {
+           echo json_encode(["quantityError" => "true"]);
+           return;
+        }
         if($this->session->userdata('cart')){
 
             $cart=$this->session->userdata('cart');

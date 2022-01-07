@@ -35,7 +35,7 @@ class Giohang extends CI_Controller {
         return TRUE;
     }
     public function info_order(){
-
+         
         $this->load->library('session');
         $this->load->helper('string');
         $this->load->library('email');

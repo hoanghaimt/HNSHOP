@@ -1,3 +1,5 @@
+
+
 <section id="product-detail">
 	<div class="container">
 		<div class="products-wrap">
@@ -45,7 +47,7 @@
 								<input type="number" class="input-text qtyDetail" title="Qty" value="1" min="1" maxlength="<?php echo ($row['number'] - $row['number_buy'])?>" id="qtyDetail" name="quantity">
 
 									
-									<button class="button btn-cart add_to_cart_detail detail-button" title="Mua ngay" aria-label="Mua ngay" onclick="onAddCart(<?php echo $row['id']  ?>)"><span><i class="fa fa-shopping-cart" aria-hidden="true"></i> Mua ngay</span></button>
+									<button class="button btn-cart add_to_cart_detail detail-button" title="Mua ngay" aria-label="Mua ngay" data-id="<?php echo $row['id']  ?>" ><span><i class="fa fa-shopping-cart" aria-hidden="true"></i> Mua ngay</span></button>
 									<buttion class="hotline detail-hotline" aria-label="Hotline" title="Holine: 08.62632424" onclick="window.location.href='tel:0123456789'"><i class="fa fa-volume-control-phone" aria-hidden="true"></i> 0971293148</buttion>
 								</div>
 							</div>
@@ -138,17 +140,30 @@
 			</section>
 			<script>
 
-				function onAddCart(id){
+				
+				$('.add_to_cart_detail').click(function(e) {
+					e.preventDefault();
 					var strurl="<?php echo base_url();?>"+'/sanpham/addcart';
 					jQuery.ajax({
 						url: strurl,
 						type: 'POST',
 						dataType: 'json',
-						data: {id: id},
+						data: {id: $(this).attr('data-id'), quantity : $("#qtyDetail").val()},
 						success: function(data) {
-							document.location.reload(true);
+							if(data.error) {
+								alert("Số lượng trong kho không đủ !");
+								$('.qtyDetail').val(1)
+								return;
+							}
 							alert('Thêm sản phẩm vào giỏ hàng thành công !');
+							return	document.location.reload(true);
 						}
 					});
-				}
+				})
+
+				$('.qtyDetail').change(function(e) {
+					if(e.target.value <= 0) {
+						$(this).val(1)
+					}
+				})
 			</script>

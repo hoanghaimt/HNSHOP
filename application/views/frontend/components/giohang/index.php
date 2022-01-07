@@ -150,6 +150,7 @@
 	</div>
 	<script>
 		function onChangeSL(id){
+		
 			var sl = document.getElementById(id).value;
 			var strurl="<?php echo base_url();?>"+'/sanpham/update';
 			jQuery.ajax({
@@ -158,8 +159,15 @@
 				dataType: 'json',
 				data: {id: id, sl:sl},
 				success: function(data) {
+				   if(data.quantityError) {
 					document.location.reload(true);
-					
+					return alert("Số lượng trong kho không đủ !");
+				   }
+					if(data.error) {
+						document.location.reload(true);
+						return alert("Số lượng phải lớn hơn 0 !");
+					}
+					document.location.reload(true);
 				}
 			});
 		}
